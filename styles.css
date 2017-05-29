@@ -1,0 +1,122 @@
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    font: 13px/20px Arial, sans-serif;
+    color: #404040;
+}
+
+.calendar {
+    margin: 50px auto;
+}
+
+.calendar__table {
+    border: 1px solid #aaa;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar__body-link {
+    text-decoration: none;
+}
+.calendar__title {
+    font-weight: normal;
+    line-height: 40px;
+    font-size: 3rem;
+    margin: 0;
+    color: #444;
+}
+
+.calendar__head-cell,
+.calendar__body-cell {
+    text-align: center;
+    padding: 0;
+}
+
+.calendar__head-cell:first-child,
+.calendar__body-cell:first-child {
+    border-left: 0;
+}
+
+.calendar__head-cell {
+    line-height: 22px;
+    font-size: 16px;
+    color: #333;
+    background: #ddd;
+    border-left: 1px solid #aaa;
+}
+
+.calendar__body-cell {
+    font-size: 14px;
+    font-weight: bold;
+    border-top: 1px solid #aaa;
+    border-left: 1px solid #aaa;
+    text-align: right;
+}
+
+.calendar__body-link {
+    display: block;
+    width: 100%;
+    height: 10vw;
+    padding: 2px;
+    line-height: 20px;
+    color: #666;
+}
+
+.calendar__body-link:hover,
+.calendar__body-cell-off .calendar__body-link {
+    background: #f3f3f3;
+}
+
+.calendar__body-cell-off .calendar__body-link {
+    color: #b3b3b3;
+}
+
+.calendar__body-cell-active .calendar__body-link,
+.calendar__body-cell .calendar__body-link:active,
+.calendar__body-cell-active .calendar__body-link:hover {
+    color: #f3f3f3;
+    background: #b22746;
+}
+
+.calendar__body-cell-active:first-child .calendar__body-link,
+.calendar__body-cell:first-child .calendar__body-link:active {
+    border-left: 0;
+    margin-left: 0;
+}
+
+.calendar__body-cell-active:last-child .calendar__body-link,
+.calendar__body-cell:last-child .calendar__body-link:active {
+    border-right: 0;
+    margin-right: 0;
+}
+
+.calendar__body-row:last-child .calendar__body-cell-active .calendar__body-link,
+.calendar__body-row:last-child .calendar__body-cell .calendar__body-link:active {
+    border-bottom: 0;
+    margin-bottom: 0;
+}
+
+@media print {
+    .calendar {
+        width: 90%;
+        margin: 10px auto;
+    }
+    .calendar__title {
+        display: none;
+    }
+    .calendar__head-cell {
+        line-height: 20px;
+        font-size: 14px;
+    }
+
+    .calendar__body-cell {
+        font-size: 12px;
+    }
+
+    .calendar__body-link {
+        height: 8vw;
+    }
+}

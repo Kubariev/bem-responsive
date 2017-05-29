@@ -1,0 +1,29 @@
+body {
+    font: 13px/20px Arial, sans-serif;
+    color: #ccc;
+}
+.calendar__table {
+    border: 1px solid #000;
+}
+.calendar__title {
+    color: #000;
+}
+.calendar__head-cell {
+    color: #999;
+    background: #eee;
+    border-left: 1px solid #000;
+}
+.calendar__body-cell {
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+}
+.calendar__body-link {
+    color: #ff0000;
+}
+.calendar__body-link:hover,
+.calendar__body-cell-off .calendar__body-link {
+    background: #f0f0f0;
+}
+.calendar__body-cell-off .calendar__body-link {
+    color: #b3b3b3;
+}
